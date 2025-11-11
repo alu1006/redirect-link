@@ -1,94 +1,94 @@
-# LINE 好友转址服务
+# LINE 好友轉址服務
 
-这是一个简单的转址服务，用于将自定义域名重定向到 LINE 好友添加链接，并提供社交媒体分享预览功能。
+這是一個簡單的轉址服務，用於將自訂網域重新導向到 LINE 好友新增連結，並提供社交媒體分享預覽功能。
 
 ## 功能特色
 
-- ✅ 自动重定向到 LINE 好友添加链接：`https://lin.ee/r73IX45Y`
-- ✅ 完整的 Open Graph 标签支持
-- ✅ 社交媒体分享时显示自定义预览图和文字
-- ✅ 响应式设计
-- ✅ 多重备用机制确保重定向成功
+- ✅ 自動重新導向到 LINE 好友新增連結：`https://lin.ee/r73IX45Y`
+- ✅ 完整的 Open Graph 標籤支援
+- ✅ 社交媒體分享時顯示自訂預覽圖和文字
+- ✅ 響應式設計
+- ✅ 多重備用機制確保重新導向成功
 
-## Open Graph 设置
+## Open Graph 設定
 
-当分享链接到 Facebook、LINE、Twitter 等社交平台时，会显示：
+當分享連結到 Facebook、LINE、Twitter 等社交平台時，會顯示：
 
-- **标题**：加入健瑋&俞汝LINE好友
+- **標題**：加入健瑋&俞汝LINE好友
 - **描述**：婚禮邀請與婚禮訊息
-- **预览图**：https://marry-form.vercel.app/images/marry_form_1_start.jpg
+- **預覽圖**：https://marry-form.vercel.app/images/marry_form_1_start.jpg
 
 ## 部署指南
 
-### 方案 1：部署到 Vercel（推荐）
+### 方案 1：部署到 Vercel（推薦）
 
-1. 安装 Vercel CLI：
+1. 安裝 Vercel CLI：
    ```bash
    npm install -g vercel
    ```
 
-2. 在项目目录下运行：
+2. 在專案目錄下執行：
    ```bash
    vercel
    ```
 
-3. 跟随提示完成部署
+3. 跟隨提示完成部署
 
-4. 在 Vercel 控制台设置自定义域名 `yobro.20260207-marry.me`
+4. 在 Vercel 控制台設定自訂網域 `yobro.20260207-marry.me`
 
 ### 方案 2：部署到 Netlify
 
-1. 将项目推送到 GitHub 仓库
+1. 將專案推送到 GitHub 倉庫
 
-2. 登录 [Netlify](https://netlify.com)
+2. 登入 [Netlify](https://netlify.com)
 
-3. 点击 "Add new site" > "Import an existing project"
+3. 點擊 "Add new site" > "Import an existing project"
 
-4. 选择你的 GitHub 仓库
+4. 選擇你的 GitHub 倉庫
 
-5. 部署设置保持默认即可（无需构建命令）
+5. 部署設定保持預設即可（無需建置指令）
 
-6. 在 Netlify 控制台的 Domain Settings 中添加自定义域名 `yobro.20260207-marry.me`
+6. 在 Netlify 控制台的 Domain Settings 中新增自訂網域 `yobro.20260207-marry.me`
 
 ### 方案 3：部署到 GitHub Pages
 
-1. 将项目推送到 GitHub 仓库
+1. 將專案推送到 GitHub 倉庫
 
-2. 在仓库设置中启用 GitHub Pages，选择 main 分支作为源
+2. 在倉庫設定中啟用 GitHub Pages，選擇 main 分支作為來源
 
-3. 在 DNS 设置中配置自定义域名
+3. 在 DNS 設定中設定自訂網域
 
-4. 在仓库根目录添加 `CNAME` 文件，内容为：`yobro.20260207-marry.me`
+4. 在倉庫根目錄新增 `CNAME` 檔案，內容為：`yobro.20260207-marry.me`
 
-## 域名设置
+## 網域設定
 
-无论使用哪个部署平台，你都需要在域名提供商处添加 DNS 记录：
+無論使用哪個部署平台，你都需要在網域提供商處新增 DNS 記錄：
 
-### 对于 Vercel：
-添加 CNAME 记录：
+### 對於 Vercel：
+新增 CNAME 記錄：
 ```
 yobro.20260207-marry.me → cname.vercel-dns.com
 ```
 
-### 对于 Netlify：
-添加 CNAME 记录：
+### 對於 Netlify：
+新增 CNAME 記錄：
 ```
-yobro.20260207-marry.me → [你的netlify域名].netlify.app
-```
-
-### 对于 GitHub Pages：
-添加 CNAME 记录：
-```
-yobro.20260207-marry.me → [你的github用户名].github.io
+yobro.20260207-marry.me → [你的netlify網域].netlify.app
 ```
 
-## 本地测试
+### 對於 GitHub Pages：
+新增 CNAME 記錄：
+```
+yobro.20260207-marry.me → [你的github使用者名稱].github.io
+```
 
-由于这是纯静态 HTML 文件，你可以：
+## 本機測試
 
-1. 直接用浏览器打开 `index.html` 文件
+由於這是純靜態 HTML 檔案，你可以：
 
-2. 或使用简单的 HTTP 服务器：
+1. 直接用瀏覽器開啟 `index.html` 檔案
+
+2. 或使用簡單的 HTTP 伺服器：
    ```bash
    # 使用 Python
    python -m http.server 8000
@@ -97,38 +97,38 @@ yobro.20260207-marry.me → [你的github用户名].github.io
    npx serve
    ```
 
-3. 然后在浏览器访问 `http://localhost:8000`
+3. 然後在瀏覽器存取 `http://localhost:8000`
 
-## 测试 Open Graph
+## 測試 Open Graph
 
-部署后，你可以使用以下工具测试 OG 标签是否正确：
+部署後，你可以使用以下工具測試 OG 標籤是否正確：
 
-- Facebook 分享调试器：https://developers.facebook.com/tools/debug/
-- Twitter Card 验证器：https://cards-dev.twitter.com/validator
+- Facebook 分享偵錯器：https://developers.facebook.com/tools/debug/
+- Twitter Card 驗證器：https://cards-dev.twitter.com/validator
 - LinkedIn Post Inspector：https://www.linkedin.com/post-inspector/
 
-## 文件结构
+## 檔案結構
 
 ```
 redirect-add-friend/
-├── index.html          # 主页面（含 OG 标签和重定向逻辑）
-└── README.md          # 项目说明文档
+├── index.html          # 主頁面（含 OG 標籤和重新導向邏輯）
+└── README.md          # 專案說明文件
 ```
 
-## 技术说明
+## 技術說明
 
-- 使用 `<meta http-equiv="refresh">` 标签作为主要重定向方式
-- 使用 `window.location.href` JavaScript 作为备用方式
-- 提供手动链接作为最后的备用选项
-- 完整的 OG 标签确保社交媒体正确抓取信息
+- 使用 `<meta http-equiv="refresh">` 標籤作為主要重新導向方式
+- 使用 `window.location.href` JavaScript 作為備用方式
+- 提供手動連結作為最後的備用選項
+- 完整的 OG 標籤確保社交媒體正確抓取資訊
 
-## 注意事项
+## 注意事項
 
-1. 确保 OG 图片链接可以公开访问
-2. 图片建议尺寸：1200x630 像素
-3. 部署后可能需要等待几分钟才能生效
-4. 首次分享时，社交平台可能需要几分钟来抓取 OG 信息
+1. 確保 OG 圖片連結可以公開存取
+2. 圖片建議尺寸：1200x630 像素
+3. 部署後可能需要等待幾分鐘才能生效
+4. 首次分享時，社交平台可能需要幾分鐘來抓取 OG 資訊
 
-## 授权
+## 授權
 
-此项目为个人使用项目。
+此專案為個人使用專案。
